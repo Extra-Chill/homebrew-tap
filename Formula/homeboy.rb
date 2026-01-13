@@ -1,25 +1,25 @@
 class Homeboy < Formula
   desc "CLI tool for development and deployment automation"
-  homepage "https://github.com/Extra-Chill/homeboy-cli"
-  version "0.5.0"
+  homepage "https://github.com/Extra-Chill/homeboy"
+  version "0.7.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Extra-Chill/homeboy-cli/releases/download/v0.5.0/homeboy-aarch64-apple-darwin.tar.xz"
-      sha256 "fc91eecfe2188c02f5fc1f163893c8d2e9572628b6e7a119ac435db948e908ff"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.7.0/homeboy-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "5ba4386145b7eee5955e60a5ce0be8c05c6619c83cdbf0d819fba343741fb7c3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Extra-Chill/homeboy-cli/releases/download/v0.5.0/homeboy-x86_64-apple-darwin.tar.xz"
-      sha256 "6915aee2340ef6724e148a36c07df836546af6246fd384fc005cf4f88919db88"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.7.0/homeboy-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "0c23f96e76d7b702992c7d98128c254bb8d48bec8fa100192d1a1bdf7ff49146"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/Extra-Chill/homeboy-cli/releases/download/v0.5.0/homeboy-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3b608e143f296a38102a9482ac47a57e8ffa0077b1ba62b493bbe4d78ef64764"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.7.0/homeboy-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "a28e814b8c7c79d1220f7f63018ade515315a8377c109f56c9eb477b2c51991f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Extra-Chill/homeboy-cli/releases/download/v0.5.0/homeboy-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9eaf0e467ce05ef07cb28460eb1885904895a0098dd383a49f715db15caaf587"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.7.0/homeboy-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "cf90607e3d3ead2f0a6a51fb785740e366063d1f49326c2d55d0d278f5efb753"
     end
   end
   license "MIT"
