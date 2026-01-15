@@ -1,25 +1,25 @@
 class Homeboy < Formula
-  desc "CLI tool for development and deployment automation"
+  desc "CLI for multi-component deployment and development workflow automation"
   homepage "https://github.com/Extra-Chill/homeboy"
-  version "0.13.0"
+  version "0.14.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.13.0/homeboy-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "c82a09916a0cc831fa13d4f1aebeda239b0b810899545b993d1565b9525b9737"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.14.0/homeboy-aarch64-apple-darwin.tar.xz"
+      sha256 "64b3df3d0ea34ad64414e78b58d6bafd26279578e86dc0e94ebca8aaf40a44c3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.13.0/homeboy-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "cc17630aba52011898c7dc45aa2049472b17648b12d0a46db80ebeeb55c7ea31"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.14.0/homeboy-x86_64-apple-darwin.tar.xz"
+      sha256 "aff2ab801a2e894ddc690d74fd20fbab1b3d33a9d5cbd442cfce55c45c9e7b4e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.13.0/homeboy-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "10fcc530f7c8710de9d5bcb208861d2055c8137c7374bf11b5d8e533db84ac1c"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.14.0/homeboy-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "e749b13407a8594f299434c03debe224b2a00ac229ea7c96d8ccc998291cbb55"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.13.0/homeboy-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e79807eed17b4064ace17e9b16aa219a328cab895a80d9a2d03a4b49b250a89a"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.14.0/homeboy-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "107e6279009276f6a9c499725a3ad7677d8c9e80c6c9e171c130d6620777133c"
     end
   end
   license "MIT"
