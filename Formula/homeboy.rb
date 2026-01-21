@@ -5,7 +5,7 @@ class Homeboy < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/Extra-Chill/homeboy/releases/download/v0.32.5/homeboy-aarch64-apple-darwin.tar.xz"
-      sha256 "b037fd55eb64bd3d1ba11943fc187f3a900dac96eebbb82a1f026b9a652ebea3"
+      sha256 "9a61fa88632c976987e7c26b51c153cdcbbbba50a4807c4683d16aaffacbc86d"
     end
   end
   license "MIT"
