@@ -1,36 +1,36 @@
 class Homeboy < Formula
   desc "CLI for multi-component deployment and development workflow automation"
   homepage "https://github.com/Extra-Chill/homeboy"
-  version "0.44.3"
+  version "0.44.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.44.3/homeboy-aarch64-apple-darwin.tar.xz"
-      sha256 "5d7c4c16fce7ff81128f345003d2584ca7e51a30a3318cfc04a86f3b21cd2a45"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.44.4/homeboy-aarch64-apple-darwin.tar.xz"
+      sha256 "77721e308e22cb452908fca64f18d18cb20004ffa81f8ea3f7733c0d2bff60ee"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.44.3/homeboy-x86_64-apple-darwin.tar.xz"
-      sha256 "613999244ef01e57a6fcb011a0976881a32789e02569b93e8118ee9bf35c84e8"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.44.4/homeboy-x86_64-apple-darwin.tar.xz"
+      sha256 "79b2f1f8ad412c649dffdcf2509e87a868bbec4e82c92fd151576c73e02e6541"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.44.3/homeboy-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "ce913d81be3d7bd3fcb59186611c06d83e46ae99f45ea2a02e20743d20719508"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.44.4/homeboy-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "6f9215adb2f6ee89b6dc4466337731590ed36a54410d1a1f0e4b067b845c18cf"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.44.3/homeboy-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ad7ff2fb4b85d4a6ecd107c1ea5c37f9bc91e0e0e97d841321fafa8a7e867a6a"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.44.4/homeboy-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "68c5a7dbd09d211ea05732b42f4ac29b1a74eac75adcfb5b053047c0f10cc366"
     end
   end
   license "MIT"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin": {},
+    "aarch64-apple-darwin":      {},
     "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin": {},
-    "x86_64-pc-windows-gnu": {},
-    "x86_64-unknown-linux-gnu": {}
-  }
+    "x86_64-apple-darwin":       {},
+    "x86_64-pc-windows-gnu":     {},
+    "x86_64-unknown-linux-gnu":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -48,18 +48,10 @@ class Homeboy < Formula
   end
 
   def install
-    if OS.mac? && Hardware::CPU.arm?
-      bin.install "homeboy"
-    end
-    if OS.mac? && Hardware::CPU.intel?
-      bin.install "homeboy"
-    end
-    if OS.linux? && Hardware::CPU.arm?
-      bin.install "homeboy"
-    end
-    if OS.linux? && Hardware::CPU.intel?
-      bin.install "homeboy"
-    end
+    bin.install "homeboy" if OS.mac? && Hardware::CPU.arm?
+    bin.install "homeboy" if OS.mac? && Hardware::CPU.intel?
+    bin.install "homeboy" if OS.linux? && Hardware::CPU.arm?
+    bin.install "homeboy" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
