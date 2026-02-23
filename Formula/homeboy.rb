@@ -1,11 +1,11 @@
 class Homeboy < Formula
   desc "CLI for multi-component deployment and development workflow automation"
   homepage "https://github.com/Extra-Chill/homeboy"
-  version "0.47.0"
+  version "0.47.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.47.0/homeboy-aarch64-apple-darwin.tar.xz"
-      sha256 "c5d029e0cd089b3d89e375be5916dddc51cf25b38e8549b8267131b519c9a887"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.47.1/homeboy-aarch64-apple-darwin.tar.xz"
+      sha256 "9e6d29df80977a1b169d6b5544245be75f11bd496b681c19111f3d4848bb0d6c"
     end
   end
   license "MIT"
