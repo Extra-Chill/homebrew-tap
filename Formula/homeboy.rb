@@ -1,18 +1,36 @@
 class Homeboy < Formula
   desc "CLI for multi-component deployment and development workflow automation"
   homepage "https://github.com/Extra-Chill/homeboy"
-  version "0.48.0"
+  version "0.49.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.48.0/homeboy-aarch64-apple-darwin.tar.xz"
-      sha256 "2a0f7b51c92aeb8d147d377c3aaf604ab5379d7c7917dd35b4b43be05d610713"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.49.0/homeboy-aarch64-apple-darwin.tar.xz"
+      sha256 "d8b1cacd6f38617e7da4eb9f404b3bf1a0957850a4ce73606d89f4d1c4af207f"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.49.0/homeboy-x86_64-apple-darwin.tar.xz"
+      sha256 "fc084116989e8f3682bbd99c2ce025ea8cca4675e261ce0e36d73839f7342ee3"
+    end
+  end
+  if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.49.0/homeboy-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ed67bae7b68d86f7236a84fa547054e27f5ec687a9d47596a0dca9e3cf132432"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.49.0/homeboy-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "e807e8f389bf3406e290821ef743e9e4ccfd925875df32b6f955c1da204607ae"
     end
   end
   license "MIT"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin": {}
-  }
+    "aarch64-apple-darwin":      {},
+    "aarch64-unknown-linux-gnu": {},
+    "x86_64-apple-darwin":       {},
+    "x86_64-pc-windows-gnu":     {},
+    "x86_64-unknown-linux-gnu":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -30,9 +48,10 @@ class Homeboy < Formula
   end
 
   def install
-    if OS.mac? && Hardware::CPU.arm?
-      bin.install "homeboy"
-    end
+    bin.install "homeboy" if OS.mac? && Hardware::CPU.arm?
+    bin.install "homeboy" if OS.mac? && Hardware::CPU.intel?
+    bin.install "homeboy" if OS.linux? && Hardware::CPU.arm?
+    bin.install "homeboy" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
