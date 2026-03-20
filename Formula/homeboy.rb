@@ -1,25 +1,25 @@
 class Homeboy < Formula
   desc "CLI for multi-component deployment and development workflow automation"
   homepage "https://github.com/Extra-Chill/homeboy"
-  version "0.83.0"
+  version "0.84.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.83.0/homeboy-aarch64-apple-darwin.tar.xz"
-      sha256 "ee3f2b4cbb7f52e57de805ddb21cb1ed6114863bd4663ba1030b81a3d1f75c70"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.84.0/homeboy-aarch64-apple-darwin.tar.xz"
+      sha256 "e50ae845e48dbbf9bcbfd7a0e9a004a4eff7c54978489089b45ae7cfd65835a0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.83.0/homeboy-x86_64-apple-darwin.tar.xz"
-      sha256 "13092845e047bed64317314c0c6a8cd9c3eb264ed8a823af40b02a6877e1dcd5"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.84.0/homeboy-x86_64-apple-darwin.tar.xz"
+      sha256 "835197ed8c88254de2421ecad427145d5dcb459ca4f567ee8339056060359c34"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.83.0/homeboy-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e267aeaa6bcd83f4b7dc30fbee9455c0de80c76b73fef9b911b7b59ba29e482a"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.84.0/homeboy-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ce08729439f79bd587da8798db0792299dfa9cadd26e684731b9e8fc3eb53f78"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.83.0/homeboy-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "450f3ac2983e8406727771fb077946fe6b638bf2c471bec6e3bd8b094c8def8d"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.84.0/homeboy-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "e332c1fd8467dc657810fba7c55e3b1d760f8cd33c61fc7033b54b8522d4b331"
     end
   end
   license "MIT"
