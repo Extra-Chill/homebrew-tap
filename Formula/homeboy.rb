@@ -1,25 +1,25 @@
 class Homeboy < Formula
-  desc "CLI for multi-component deployment and development workflow automation"
+  desc "Headless automation for agentic software engineering workflows"
   homepage "https://github.com/Extra-Chill/homeboy"
-  version "0.205.0"
+  version "0.206.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.205.0/homeboy-aarch64-apple-darwin.tar.xz"
-      sha256 "ce5908bf867f395b8947262bc492ce01ddb66d7df294747dcfd945f177026fdf"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.206.0/homeboy-aarch64-apple-darwin.tar.xz"
+      sha256 "ef87421689756cb0f4ee01eeca14878f90a33eb1acffa968603971f8b0e9fd1a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.205.0/homeboy-x86_64-apple-darwin.tar.xz"
-      sha256 "12a048be1481289a1ef4e3635dda15c9adb42f9400c70e1ac8981f0979687e60"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.206.0/homeboy-x86_64-apple-darwin.tar.xz"
+      sha256 "18acf3bd937f900251077442175af77c914178f50c5490d4c69491801b86e177"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.205.0/homeboy-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d12559c1b33ac89f653a062e3be378985ea10c100b7b333973cb0823d3f55398"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.206.0/homeboy-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b24e7cc491aa0db15aaeba3703c011b8ae15ec3e6aa6260a2aaf08ac46590758"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.205.0/homeboy-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c04f88ddc987f88daa8dc965edc62a141632a4c5b251bc6c14883ebb7d2af1fb"
+      url "https://github.com/Extra-Chill/homeboy/releases/download/v0.206.0/homeboy-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4ffd809ae64ebcb87cecaba7d2d0a76df694d266dc2417a4314d8a2d4b5e7d8f"
     end
   end
   license "MIT"
